@@ -1,0 +1,47 @@
+.container {
+    background: linear-gradient(to right, #e66465, #9198e5);
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: colorChange 5s ease infinite;
+  }
+  
+  @keyframes colorChange {
+    0% {
+      background: linear-gradient(to right, #e66465, #9198e5);
+    }
+    50% {
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    }
+    100% {
+      background: linear-gradient(to right, #e66465, #9198e5);
+    }
+  }
+  
+  form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  input {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-bottom: 2px solid #a18cd1;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+  }
