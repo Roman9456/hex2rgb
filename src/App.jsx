@@ -19,7 +19,7 @@ function App() {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (colorHex.length === 7) {
+    if (colorHex.length === 7 && /^#[A-Fa-f0-9]{6}$/.test(colorHex)) {
       const newColorRGB = convertHEX(colorHex);
       setColorRGB(newColorRGB);
       if (newColorRGB === 'rgb(255, 0, 0)') {
@@ -39,12 +39,10 @@ function App() {
     }
   }, [colorHex]);
 
-  const handleColorChange = ({ target }) => {
-    const { value } = target;
-    if (/^#?([A-Fa-f0-9]{6})$/.test(value)) {
+  const handleColorChange = (event) => {
+    const { value } = event.target;
+    if (value === '' || value.startsWith('#')) {
       setColorHex(value);
-    } else {
-      setColorHex('');
     }
   };
 
@@ -75,4 +73,3 @@ function App() {
 }
 
 export default App;
-
